@@ -15,7 +15,7 @@ interface INFT {
 }
 
 
-contract SaleNFT is Ownable, ReentrancyGuard {
+contract Minter is Ownable, ReentrancyGuard {
     INFT public nft;
 
     constructor(INFT _nft) {

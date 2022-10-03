@@ -2,25 +2,27 @@ import { ethers } from "hardhat";
 
 async function main() {
 
-  const NFT = await ethers.getContractFactory("NFT");
-  const nft = await NFT.deploy("https://xxxxxxxx/");
+  // const NFT = await ethers.getContractFactory("NFT");
+  // const nft = await NFT.deploy("https://xxxxxxxx/");
 
-  await nft.deployed();
+  // await nft.deployed();
 
-  console.log(`add deployed: ${nft.address}`);
-  const Other = await ethers.getContractFactory("Other");
-  const other = await Other.deploy(nft.address);
-
-  await other.deployed();
-
-  console.log(`other deployed: ${other.address}`);
-
-  await nft.setRole(other.address);
-  await other.addnaja();
+  // console.log(`add deployed: ${nft.address}`);
 
 
-  const number = await nft.num();
-  console.log(`num: ${number}`);
+  // const Minter = await ethers.getContractFactory("Minter");
+  // const minter = await Minter.deploy(nft.address);
+
+  // await minter.deployed();
+
+  // console.log(`other deployed: ${minter.address}`);
+
+  // await nft.setRole(minter.address);
+  // await minter._mint();
+
+
+  // const number = await nft.num();
+  // console.log(`num: ${number}`);
 
 
 }
